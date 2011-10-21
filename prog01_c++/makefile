@@ -4,7 +4,7 @@ OBJECTS=graph.o vertex.o edge.o
 
 TEMPLATES=#
 
-all: main.exe
+all: main.exe dijkstra.exe
 	
 %.exe: %.cpp ${OBJECTS} ${TEMPLATES}
 	${CXX} -o $@ $< ${OBJECTS}

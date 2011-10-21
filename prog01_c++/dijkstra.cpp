@@ -40,7 +40,7 @@ void dijkstra(graph& g, const vertex source, map<vertex::vertex_id, edge::weight
 		edge::weight_type dst = weights[curid];
 		
 		typedef map<vertex::vertex_id, edge>::iterator mapit;
-		for (mapit it = g.edges[curid].begin(); it != g.edges[curid].end(); it++)
+		for (mapit it = g.vertices[curid].begin(); it != g.vertices[curid].end(); it++)
 		{
 			if (dst + it->second.weight < weights[it->first])
 			{
